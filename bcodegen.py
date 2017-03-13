@@ -15,13 +15,12 @@ time.sleep(2)
 from PIL import Image
 
 for item in mylist:
-	im1 = Image.open('/Users/steven/Desktop/Pillow/ticket.png')
-	im2 = Image.open('/Users/steven/Desktop/Pillow/Generator/' + item)
-	area = (30, 1380, 553, 1660)
+    im1 = Image.open('/Users/steven/Desktop/Pillow/ticket.png') #Write to x Folder -> 100 tickets all on left
+    im2 = Image.open('/Users/steven/Desktop/Pillow/Generator/' + item) #For each loop for each content of folder
+    area = (30, 1380, 553, 1660)                                       #Write to another folder do 7x
 
-	im1.paste(im2, area)
-	im1.show()
-	# im1.save(line)
+    im1.paste(im2, area)
+    im1.save('line' + item)
 
 
 
